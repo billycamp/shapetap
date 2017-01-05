@@ -1,0 +1,119 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="ShapeTap.MainPage"
+    Name="RootPhoneAppPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeLarge}"
+    Foreground="White"
+    Background="Black"
+    SupportedOrientations="Portrait" 
+    Orientation="Portrait"
+    shell:SystemTray.IsVisible="False"
+    d:DesignHeight="800" 
+    d:DesignWidth="480" 
+    Loaded="RootPhoneAppPage_Loaded"
+    Unloaded="RootPhoneAppPage_Unloaded" xmlns:my="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI">
+
+
+    <Canvas Name="CanvasRoot" Height="800" Width="480" Margin="0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Black"    >
+        <Grid Canvas.ZIndex="2000" Name="GridAds" Canvas.Top="680" HorizontalAlignment="Left" Width="480" Height="80" Visibility="Collapsed">
+        </Grid>
+        <Image Name="ImgBranding" Source="ScreenImage.jpg" Margin="0,0" VerticalAlignment="Top" HorizontalAlignment="Left"  Canvas.ZIndex="1000"/>
+
+        <Grid Height="800" Name="GridRoot" Width="480" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.ZIndex="1"    >
+
+            <Grid Height="800" Name="GridTiles" Width="425" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.ZIndex="1"    >
+                <Grid Height="170" HorizontalAlignment="Left" Margin="0" Name="GridHead" VerticalAlignment="Top" Width="470" Canvas.ZIndex="1" >
+                    <Canvas Style="{StaticResource CanvasStyleGrayShape120}" Margin ="0,0" Name="HeadCanvas0" Canvas.ZIndex="1"    >                       
+                        <Image Name="ImgHead0" Source="Circle.png" IsHitTestVisible="False" />
+                    </Canvas>
+
+                    
+                    <Canvas Canvas.ZIndex="2" >
+                        <TextBlock Name="TextBlockScore" FontWeight="Bold"  FontSize="84" VerticalAlignment="Center" TextAlignment="Right" HorizontalAlignment="Left" Foreground="White" Height="90" Width="270" Margin="150,0,12,650" Canvas.ZIndex="500" Canvas.Top="0"> 0</TextBlock>
+                        
+                    </Canvas>
+
+                    
+                    <Canvas Name="CanvasTimeBackground" Background="DarkGray" Margin="0,140" Height="10" Width="420" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.ZIndex="1" />
+                    <Canvas Name="CanvasTimeLeft" Background="Green" Margin="0,140" Height="10" Width="420" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.ZIndex="1"    />
+
+                </Grid>
+                <Grid Height="600" Name="GridShapes" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Bottom" Width="425"    >
+                    <Canvas Style="{StaticResource CanvasStyleRedShape120}" Margin ="0,0" Name="ShapeCanvas0" >                        
+                        <Image Name="ImgShape0" Source="Triangle.png"/>
+                        
+                            <Canvas.RenderTransform>
+                                <TranslateTransform x:Name="translation0" />
+                            </Canvas.RenderTransform>
+
+                    </Canvas>
+                    <Canvas Style="{StaticResource CanvasStyleRedShape120}"  Margin="150,0" Name="ShapeCanvas1" >
+                        <Image Name="ImgShape1" Source="Circle.png" />
+                    </Canvas>
+                    <Canvas Style="{StaticResource CanvasStyleRedShape120}"  Margin="300,0" Name="ShapeCanvas2">
+                        <Image Name="ImgShape2" Source="Star.png" />
+                    </Canvas>
+                    <Canvas Style="{StaticResource CanvasStyleRedShape120}"  Margin="0,150" Name="ShapeCanvas3">
+                        <Image Name="ImgShape3" Source="Square.png" />
+                    </Canvas>
+                    <Canvas Style="{StaticResource CanvasStyleRedShape120}"  Margin="150,150" Name="ShapeCanvas4">
+                        <Image Name="ImgShape4" Source="Hexagon.png"/>
+                    </Canvas>
+                    <Canvas Style="{StaticResource CanvasStyleRedShape120}"  Margin="300,150" Name="ShapeCanvas5">
+                        <Image Name="ImgShape5" Source="Diamond.png" />
+                    </Canvas>
+                    <Canvas Style="{StaticResource CanvasStyleRedShape120}"  Margin="0,300" Name="ShapeCanvas6">
+                        <Image Name="ImgShape6" Source="Triangle.png" />
+                    </Canvas>
+                    <Canvas Style="{StaticResource CanvasStyleRedShape120}"  Margin="150,300" Name="ShapeCanvas7">
+                        <Image Name="ImgShape7" Source="Heart.png" />
+                    </Canvas>
+                    <Canvas Style="{StaticResource CanvasStyleRedShape120}"  Margin="300,300" Name="ShapeCanvas8">
+                        <Image Name="ImgShape8" Source="Circle.png" />
+                    </Canvas>
+                    <Canvas Style="{StaticResource CanvasStyleRedShape120}"  Margin="0,450" Name="ShapeCanvas9">
+                        <Image Name="ImgShape9" Source="Diamond.png" />
+                    </Canvas>
+                    <Canvas Style="{StaticResource CanvasStyleRedShape120}"  Margin="150,450" Name="ShapeCanvas10">
+                        <Image Name="ImgShape10" Source="Star.png" />
+                    </Canvas>
+                    <Canvas Style="{StaticResource CanvasStyleRedShape120}"  Margin="300,450" Name="ShapeCanvas11">
+                        <Image Name="ImgShape11" Source="Square.png" />
+                    </Canvas>
+                </Grid>
+                
+            </Grid>
+            <Grid Height="630" Canvas.ZIndex="200" Name="GridToGet" Width="55" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                <Canvas Style="{StaticResource CanvasStyleWhite25x50}" Background="Red" Margin ="0,0" Name="ColorCanvas0" />
+                <Canvas Style="{StaticResource CanvasStyleWhite25x50}" Background="Orange" Margin ="0,60" Name="ColorCanvas1" />
+                <Canvas Style="{StaticResource CanvasStyleWhite25x50}" Background="Yellow" Margin ="0,120" Name="ColorCanvas2" />
+                <Canvas Style="{StaticResource CanvasStyleWhite25x50}" Background="Green" Margin ="0,180" Name="ColorCanvas3" />
+                <Canvas Style="{StaticResource CanvasStyleWhite25x50}" Background="Blue" Margin ="0,240" Name="ColorCanvas4" />
+                <Canvas Style="{StaticResource CanvasStyleWhite25x50}" Background="Indigo" Margin ="0,300" Name="ColorCanvas5" />
+                <Canvas Style="{StaticResource CanvasStyleWhite25x50}" Background="Violet" Margin ="0,360" Name="ColorCanvas6" />
+                <Canvas Style="{StaticResource CanvasStyleWhite25x50}" Background="DarkGray" Margin ="0,420" Name="ColorCanvas7" />
+                <Canvas Style="{StaticResource CanvasStyleWhite25x50}" Background="Gray" Margin ="0,480" Name="ColorCanvas8" />
+                <Canvas Style="{StaticResource CanvasStyleWhite25x50}" Background="White" Margin ="0,540" Name="ColorCanvas9" />
+            </Grid>
+
+
+            
+
+        </Grid>
+        <TextBlock Canvas.ZIndex="50" Name="TextBlockLevel" FontSize="56" FontStyle="Italic" FontWeight="ExtraBold" FontStretch="UltraExpanded" Text="Level 1" Foreground="#FF484343" Height="380" Width="43" Canvas.Top="0" Canvas.Left="425" TextWrapping="Wrap" />
+        
+        <!--
+        <MediaElement Name="MediaElement0" IsHitTestVisible="False" Height="0" Width="1"/>
+        <MediaElement Name="MediaElement1" IsHitTestVisible="False" Height="0" Width="1"/>
+        <MediaElement Name="MediaElement2" IsHitTestVisible="False" Height="0" Width="1"/>
+        <MediaElement Name="MediaElement3" IsHitTestVisible="False" Height="0" Width="1"/>
+        -->
+    </Canvas>
+
+</phone:PhoneApplicationPage>

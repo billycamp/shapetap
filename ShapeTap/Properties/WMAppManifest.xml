@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.0">
+  <App xmlns="" ProductID="{5f9456f8-40e8-4ae0-8cd3-7ce5e5ebbabe}" Title="ShapeTap" RuntimeType="Silverlight" Version="1.0.0.1" Genre="apps.normal"  Author="wil campbell software" Description="A fun and exciting shape tapping game" Publisher="wil campbell software">
+    <IconPath IsRelative="true" IsResource="false">AppIcon.png</IconPath>
+    <Capabilities>
+      <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+      <Capability Name="ID_CAP_IDENTITY_USER" />
+      <Capability Name="ID_CAP_NETWORKING"/>
+      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+     <!-- <Capability Name="ID_CAP_GAMERSERVICES"/>-->
+      <Capability Name="ID_CAP_IDENTITY_DEVICE"/>
+      <Capability Name="ID_CAP_IDENTITY_USER"/>
+      <!--<Capability Name="ID_CAP_LOCATION"/>-->
+      <Capability Name="ID_CAP_MEDIALIB"/>
+      <!--<Capability Name="ID_CAP_MICROPHONE"/>-->
+      <Capability Name="ID_CAP_NETWORKING"/>
+      <Capability Name="ID_CAP_PHONEDIALER"/>
+      <Capability Name="ID_CAP_PUSH_NOTIFICATION"/>
+      <Capability Name="ID_CAP_SENSORS"/>
+    </Capabilities>
+    <Tasks>
+      <DefaultTask  Name ="_default" NavigationPage="MainPage.xaml"/>
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="ShapeTapToken" TaskName="_default">
+        <TemplateType5>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
+          <Count>0</Count>
+          <Title></Title>
+        </TemplateType5>
+      </PrimaryToken>
+    </Tokens>
+  </App>
+</Deployment>
